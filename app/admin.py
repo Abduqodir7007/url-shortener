@@ -8,5 +8,5 @@ class AdminUser(admin.ModelAdmin):
 class UrlAdmin(admin.ModelAdmin):
     list_display = ['original_url','short_url',]
     
-admin.site.register(AdminUser,User)
-admin.site.register(UrlAdmin,Url)
+admin.site.register(User,AdminUser)
+admin.site.register(Url,UrlAdmin)

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'app',
     'rest_framework_simplejwt',
+    'drf_spectacular',
 
 ]
 # settings.py
@@ -56,6 +57,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 SIMPLE_JWT = {
