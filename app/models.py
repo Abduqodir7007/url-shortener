@@ -59,14 +59,3 @@ class Url(models.Model):
         return self.original_url
 
         
-    
-class ClickEvent(models.Model):
-    short_url = models.ForeignKey(
-        Url,on_delete=models.CASCADE
-    )
-    accessed_at = models.DateTimeField(auto_now_add=True)
-    ip_adress = models.GenericIPAddressField(blank=True,null=True)
-    user_agent = models.TextField(blank=True,null=True)
-    
-    def __str__(self):
-        return self.short_url

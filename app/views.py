@@ -7,7 +7,7 @@ from rest_framework import status
 from django.shortcuts import get_object_or_404, redirect
 from django.http import Http404, HttpResponseGone
 from django.contrib.auth import authenticate
-from .models import ClickEvent, Url
+from .models import Url
 from rest_framework.permissions import IsAuthenticated
 from django.views.generic import RedirectView
 from .serializers import (

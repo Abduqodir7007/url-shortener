@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User, Url, ClickEvent
+from .models import User, Url
 from django.contrib.auth import get_user_model
 from .utils import generate_random_url
 
@@ -55,9 +55,3 @@ class UrlSer(serializers.ModelSerializer):
             validated_data['short_url'] = url
             
         return super().create(validated_data)
-
-class ClickEventSer(serializers.ModelSerializer):
-
-    class Meta:
-        model = ClickEvent
-        fields = ["id", "accessed_at", "ip_address", "user_agent"]
